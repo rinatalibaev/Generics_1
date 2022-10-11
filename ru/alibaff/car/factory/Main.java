@@ -34,8 +34,22 @@ public class Main {
             System.out.println("engine speed: " + car.getEngineSpeed());
             System.out.println("angle: " + car.getAngle());
             System.out.println("rezina: " + car.getRezina().getName());
+            System.out.println("disposed: " + car.isDisposed());
+            System.out.println();
+            car.dispose();
+        }
+
+        for (Car<? extends KPP, ? extends Seazon> car : List.of(car1, car2)) {
+            System.out.println("***car after disposal***");
+            System.out.println("kpp type: " + (car.getKpp() == null? "null" : car.getKpp().getName()));
+            System.out.println("speed: " + car.getCarSpeed());
+            System.out.println("engine speed: " + car.getEngineSpeed());
+            System.out.println("angle: " + car.getAngle());
+            System.out.println("rezina: " + (car.getRezina() == null? "null" : car.getRezina().getName()));
+            System.out.println("disposed: " + car.isDisposed());
             System.out.println();
         }
+
 
     }
 }

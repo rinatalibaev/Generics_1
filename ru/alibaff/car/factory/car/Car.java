@@ -6,6 +6,7 @@ public class Car<A, B> {
     private int carSpeed;
     private int engineSpeed;
     private int angle;
+    private boolean disposed;
 
     public int getAngle() {
         return angle;
@@ -45,5 +46,18 @@ public class Car<A, B> {
 
     public void setEngineSpeed(int engineSpeed) {
         this.engineSpeed = engineSpeed;
+    }
+
+    public void dispose() {
+        this.carSpeed = 0;
+        this.angle = 0;
+        this.engineSpeed = 0;
+        this.kpp = null;
+        this.rezina = null;
+        this.disposed = true;
+    }
+
+    public boolean isDisposed() {
+        return disposed;
     }
 }

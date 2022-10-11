@@ -2,6 +2,7 @@ package ru.alibaff.car.factory.assembler;
 
 import ru.alibaff.car.factory.car.Car;
 import ru.alibaff.car.factory.kpp.KPP;
+import ru.alibaff.car.factory.rezina.Seazon;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -27,6 +28,10 @@ public class CarAssembler<A, B> {
             System.out.println("Do nothing");
         }
         return car;
+    }
+
+    public void disposeCar(Car<? extends KPP, ? extends Seazon> car) {
+
     }
 
     private void setKpp(Car<A, B> car) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
