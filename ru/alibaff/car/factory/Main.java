@@ -36,7 +36,7 @@ public class Main {
             System.out.println("rezina: " + car.getRezina().getName());
             System.out.println("disposed: " + car.isDisposed());
             System.out.println();
-            car.dispose();
+            carAssembler1.disposeCar(car);
         }
 
         for (Car<? extends KPP, ? extends Seazon> car : List.of(car1, car2)) {

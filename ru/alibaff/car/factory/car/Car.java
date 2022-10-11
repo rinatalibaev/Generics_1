@@ -48,13 +48,8 @@ public class Car<A, B> {
         this.engineSpeed = engineSpeed;
     }
 
-    public void dispose() {
-        this.carSpeed = 0;
-        this.angle = 0;
-        this.engineSpeed = 0;
-        this.kpp = null;
-        this.rezina = null;
-        this.disposed = true;
+    public void setDisposed(boolean disposed) {
+        this.disposed = disposed;
     }
 
     public boolean isDisposed() {

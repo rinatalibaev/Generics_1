@@ -31,7 +31,13 @@ public class CarAssembler<A, B> {
     }
 
     public void disposeCar(Car<? extends KPP, ? extends Seazon> car) {
-
+        car.setCarSpeed(0);
+        car.setCarSpeed(0);
+        car.setEngineSpeed(0);
+        car.setAngle(0);
+        car.setKpp(null);
+        car.setRezina(null);
+        car.setDisposed(true);
     }
 
     private void setKpp(Car<A, B> car) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
